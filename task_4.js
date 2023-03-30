@@ -11,7 +11,8 @@ Instrument.prototype.isState = function(bool) {
     this.state = bool;
 };
 Instrument.prototype.sum = function (sumWatt) {
-    if (this.state) return sumWatt += this.watt;
+    if (this.state) sumWatt += this.watt;
+    return sumWatt;
 }
 function CategoryTool(name, category, watt) {
     this.watt = watt,
